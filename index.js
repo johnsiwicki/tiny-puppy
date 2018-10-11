@@ -13,7 +13,7 @@ module.exports = function(myVar) {
 
 //screenshots of common viewports
 (async () => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({headless: true});
   const page = await browser.newPage();
 
   // An array of viewport sizes for different devices.
@@ -41,7 +41,7 @@ module.exports = function(myVar) {
 
 // Lighthouse Time
 
-const url = 'https://www.connecticutbasementsystems.com/';
+ 
 
 (async() => {
 // Use Puppeteer to launch headless Chrome.
