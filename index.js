@@ -3,7 +3,13 @@ const devices = require('puppeteer/DeviceDescriptors');
 const lighthouse = require('lighthouse');
 const {URL} = require('url');
 const fs = require('fs');
-const site = "https://www.ayersbasementsystems.com/"; 
+
+
+ 
+
+module.exports = function(myVar) {
+
+ console.log(myVar);
 
 //screenshots of common viewports
 (async () => {
@@ -13,7 +19,7 @@ const site = "https://www.ayersbasementsystems.com/";
   // An array of viewport sizes for different devices.
   const viewports = [1600, 1000, 800, 640, 320, 240];
 
-  await page.goto(site);
+  await page.goto(myVar);
 
   for(let i=0; i < viewports.length; i++) {
     let vw = viewports[i];
@@ -29,19 +35,15 @@ const site = "https://www.ayersbasementsystems.com/";
       fullPage: true
     });
   };
-
-
-
-
   browser.close();
 })();
 
 
 // Lighthouse Time
+
+const url = 'https://www.connecticutbasementsystems.com/';
+
 (async() => {
-
-const url = 'https://www.ayersbasementsystems.com/';
-
 // Use Puppeteer to launch headless Chrome.
 const browser = await puppeteer.launch({headless: true});
 const remoteDebugPort =(new URL(browser.wsEndpoint())).port;
@@ -51,7 +53,7 @@ const remoteDebugPort =(new URL(browser.wsEndpoint())).port;
 browser.on('targetchanged', async target => {
   const page = await target.page();
 
-  if (page && page.url() === url) {
+  if (page && page.url() === myVar) {
     const client = await page.target().createCDPSession();
     // await client.send('Network.enable'); // Already enabled by pptr.
     await client.send('Network.emulateNetworkConditions', {
@@ -66,7 +68,7 @@ browser.on('targetchanged', async target => {
 
 // Lighthouse opens url and tests it.
 // Note: Possible race with Puppeteer observing the tab opening using `targetchanged` above.
-const {report} = await lighthouse(url, {
+const {report} = await lighthouse(myVar, {
   port: remoteDebugPort,
   output: 'html',
   logLevel: 'info',
@@ -82,4 +84,7 @@ console.log('Results written.');
 await browser.close();
 })();
 
+
+
+};
  
