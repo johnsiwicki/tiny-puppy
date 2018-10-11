@@ -13,7 +13,7 @@ module.exports = function(myVar) {
 
 //screenshots of common viewports
 (async () => {
-  const browser = await puppeteer.launch({headless: true});
+  const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
   const page = await browser.newPage();
 
   // An array of viewport sizes for different devices.
@@ -45,7 +45,7 @@ module.exports = function(myVar) {
 
 (async() => {
 // Use Puppeteer to launch headless Chrome.
-const browser = await puppeteer.launch({headless: true});
+const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
 const remoteDebugPort =(new URL(browser.wsEndpoint())).port;
 
 // Watch for Lighthouse to open url, then customize network conditions.
@@ -87,4 +87,10 @@ await browser.close();
 
 
 };
+
+
+
+309   /  630
+
+
  
