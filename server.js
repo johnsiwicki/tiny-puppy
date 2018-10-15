@@ -25,9 +25,10 @@ app.get("/", function (request, response) {
 app.post('/', function(req, res){
     var myVar = req.body.url;
     var circle = require('./index.js')(myVar);
-    if (circle) {
-         res.sendFile(__dirname + '/index.html');
-    }
+
+    setImmediate(() => {
+      res.sendFile(__dirname + '/index.html');
+    });
    
 });
 
@@ -37,3 +38,4 @@ app.listen(app.get('port'), function() {
 
 
 
+ 

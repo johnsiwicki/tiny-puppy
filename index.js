@@ -77,9 +77,11 @@ module.exports = function(myVar) {
     });
 
     // Save html report.
-    fs.writeFileSync('results.html', report);
-    console.log('Results written.');
-    await browser.close();
+      fs.writeFileSync('results.html', report);
+       console.log('Results written.');
+       await browser.close();
+
+
     })();
 
 };
