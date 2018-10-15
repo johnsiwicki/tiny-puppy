@@ -17,7 +17,7 @@ module.exports = function(myVar) {
   const page = await browser.newPage();
 
   // An array of viewport sizes for different devices.
-  const viewports = [1600, 1000, 800, 640, 320, 240];
+  const viewports = [1366, 1280, 1024, 640, 414, 411, 375, 320];
 
   await page.goto(myVar);
 
