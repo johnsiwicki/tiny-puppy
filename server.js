@@ -36,15 +36,8 @@ app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
 
-
-
  
 
 
-
-
-
-
-  lazyLoad: 'ondemand',
-
- https: //api.glitch.com/unicorn-sunshine/git
+< div class = "row" > < div class = "columns" > < p > < a href = "https://www.prohome1.com/siding/before-after/32592-before-and-after-of-garage-in-chicago-il.html"
+tabindex = "0" > Before and After of Garage in Chicago, IL < /a></p > < /div>        </div >
