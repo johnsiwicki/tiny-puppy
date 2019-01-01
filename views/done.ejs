@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Puppy </title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.3/foundation.css" />
+        <link href="https://fonts.googleapis.com/css?family=Pattaya" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    </head>
+    <body>
+    <div class="container">
+
+
+ 
+      
+
+ <p>
+           URL Scanned: <%= url %>
+        </p>
+
+    <h3>Screenshots</h3>
+      <div id="images">
+        
+        
+        
+
+                <p><button class="button" data-open="mobile-1024">1024 Width</button></p>
+                <div class="tiny reveal" id="mobile-1024" data-reveal>
+                <img src="/screen-1024.png">
+                              </div>
+
+
+
+                  <p><button class="button" data-open="mobile-1280">1280 Width</button></p>
+                  <div class="tiny reveal" id="mobile-1280" data-reveal>
+                  <img src="/screen-1280.png">
+                          </div>
+
+
+
+                          
+                  <p><button class="button" data-open="mobile-1366">1366 Width</button></p>
+                  <div class="tiny reveal" id="mobile-1366" data-reveal>
+                  <img src="/screen-1366.png">
+                          </div>
+        
+        
+        <p><button class="button" data-open="mobile-iPhoneX">iPhoneX</button></p>
+                  <div class="tiny reveal" id="mobile-iPhoneX" data-reveal>
+                  <img src="/site-iphoneX.png">
+                          </div>
+        
+        
+         <p><button class="button" data-open="mobile-iPhoneSE">iPhoneSE</button></p>
+                  <div class="tiny reveal" id="mobile-iPhoneSE" data-reveal>
+                  <img src="/site-iPhoneSE.png">
+                          </div>
+         
+        
+             <p><button class="button" data-open="mobile-Pixel2">Pixel2</button></p>
+                  <div class="tiny reveal" id="mobile-Pixel2" data-reveal>
+                  <img src="/site-Pixel2.png">
+                          </div>
+        
+   
+        
+        <h4>
+          Meta
+        </h4>
+        <p><b>Title:</b> <%= title %></p>
+        <p><b>Description:</b> <%= pDesc %></p>
+        
+        
+        
+          <p><b>h1:</b> <%= h1 %></p>
+        
+         <h4>
+          Debug
+        </h4>
+        
+         <p id="errors"><b>You have Javascript <%= error%> Errors</b> </p>
+        
+      </div>
+       </div>
+     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      
+      
+      
+    </script>
+      </body>
+</html>
+
+
+  
