@@ -1,7 +1,1 @@
-# Tiny Puppy
-
-Using Puppeteer to automation tasks
-
-- Progress Bar for Tasks 
-- Match up Viewports to real devices
-- Desktop and Mobile for Lighthouse reports
+A test of [Puppeteer](https://github.com/GoogleChrome/puppeteer) on Glitch, grabbing part of the Puppeteer homepage.
